@@ -701,7 +701,7 @@ var alamode = {
     var map = new L.Map(id, {
       center: new L.LatLng(C.lat, C.lng),
       zoom: C.zoom,
-      zoomSnap: 0.1
+      zoomSnap: 0.1,
       maxZoom: C.zoom,
       minZoom: C.zoom,
       layers: [baseLayer, heatmapLayer]
