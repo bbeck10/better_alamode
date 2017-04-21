@@ -671,8 +671,8 @@ var alamode = {
 
     var baseLayer = L.tileLayer(
       'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 2,
-      minZoom: 2
+      maxZoom: zoom,
+      minZoom: zoom,
     });
 
     var d = {
@@ -700,9 +700,10 @@ var alamode = {
 
     var map = new L.Map(id, {
       center: new L.LatLng(C.lat, C.lng),
-      zoom: Math.floor(C.zoom),
-      maxZoom: 2,
-      minZoom: 2,
+      zoom: C.zoom,
+      zoomSnap: 0.1
+      maxZoom: C.zoom,
+      minZoom: C.zoom,
       layers: [baseLayer, heatmapLayer]
     });
 
